@@ -7400,7 +7400,7 @@ table.footable-paging-center > tfoot > tr.footable-paging > td {
       -ms-flex-pack: center;
           justify-content: center;
   overflow: hidden;
-  min-width: 100%;
+  min-width: 300;
   min-height: 100vh;
 }
 .auth-wrapper a,
@@ -7436,20 +7436,23 @@ table.footable-paging-center > tfoot > tr.footable-paging > td {
 }
 .auth-wrapper .auth-content {
   position: relative;
-  width: 390px;
+  width: 500px; /* Adjust the width to your preference */
   padding: 15px;
   z-index: 5;
 }
+
 .auth-wrapper .auth-content.multyform, .auth-wrapper .auth-content.subscribe {
-  width: 750px;
+  width: 900px; /* Adjust the width for specific cases if needed */
 }
+
 @media only screen and (max-width: 768px) {
-  .auth-wrapper {
-    max-width: 360px;
+  .auth-wrapper .auth-content {
+    max-width: 100%; /* Ensure it doesn't exceed the screen width */
   }
 }
+
 @media only screen and (max-width: 575px) {
-  .auth-wrapper .card .card-body {
+  .auth-wrapper .auth-content {
     padding: 30px 15px;
   }
 }

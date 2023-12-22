@@ -79,30 +79,73 @@
       </div>
     </div>
 {% endif %}
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 
-
-  <div class="row">
-    <div class="col-sm-12">
-      <div class="card">
-        <div class="card-header">
-          <div class="i-block card-body" data-clipboard-text="feather icon-award" data-filter="icon-award" data-toggle="tooltip" title data-original-title="icon-award">
-            <i class="feather icon-award "> </i>
-            <h5>Endeavour Edtech</h5>
-            </div>
-         
-        </div>
-        <div class="card-block">
-          <p> Encouraging students to participate in hands-on activities, discussions, and projects to promote critical thinking and problem-solving.Fostering student engagement through discussions, group work, and collaborative projects, allowing them to learn from peers and apply their knowledge. Integrating practical, real-world examples and scenarios into the curriculum to show the relevance of the subject matter.
-          </p>
-        </div>
+<div class="row">
+  <div class="col-sm-12">
+      <div class="card"> <!-- Add 'shadow-lg' for a large shadow, you can adjust the size based on your preference -->
+          <div class="card-header">
+              <div class="img-fluid img-logo center-block" >
+                <img src="{% static 'assets/images/logo.jpg' %}" alt="Logo" height="300px" width:"300px">
+              
+              </div>
+          </div>
+          <div class="card-block">
+              <div class="row">
+                  <div class="col-md-4">
+                      <!-- Add your image here -->
+                      <div>
+                        <lottie-player src="https://lottie.host/ad5924b4-04d7-4d62-bf78-2eee05cd0640/KruuMtNgnf.json" background="transparent"  speed="1"  style="width: 100%; height: auto;"  loop  autoplay></lottie-player>
+                      </div>
+                  </div>
+                  <div class="col-md-8">
+                    <p class="custom-paragraph">
+                        Encouraging students to participate in hands-on activities, discussions, and projects to promote critical thinking and problem-solving.
+                        Fostering student engagement through discussions, group work, and collaborative projects, allowing them to learn from peers and apply their knowledge.
+                        Integrating practical, real-world examples and scenarios into the curriculum to show the relevance of the subject matter.
+                    </p>
+                    <p class="scheduling-paragraph">
+                        Schedule your classes with our convenient platform. Book your slot now!
+                    </p>
+                </div>
+              </div>
+          </div>
       </div>
-    </div>
   </div>
-
+</div>
+  <style>
+    .custom-paragraph {
+      font-size: 18px;
+      font-weight: bold;
+  }
   
+  .scheduling-paragraph {
+      font-size: 16px;
+  }
+  </style>
+
         <!-- [ Main Content ] end -->
       
     </div>
   </div>
+<style>
+  
 
+.card-header h5 {
+    margin-bottom: 0; /* Remove default margin for h5 */
+}
+
+.card-block {
+    padding: 15px;
+}
+
+.img-fluid {
+    max-width: 100%; /* Make the image responsive */
+    height: auto;
+}
+.img-logo {
+  max-width: 50px; /* Set the maximum width for your logo */
+  height: auto;
+}
+</style>
   {% endblock content %}
