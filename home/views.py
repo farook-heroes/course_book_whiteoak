@@ -218,7 +218,7 @@ def profile(request):
 
 from django.views.decorators.csrf import csrf_exempt
 
-
+@csrf_exempt     
 def contact_us(request):
   if (request.method=="POST"):
         name=request.POST["name"]
