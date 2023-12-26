@@ -10,7 +10,8 @@ urlpatterns = [
    path('contact/' , views.contact,  name='contact'),
     path('test-email/', views.test_email, name='test_email'),
      path('sample-page/', views.sample_page, name='sample_page'),
- 
+ path('contact-us/', views.contact_us, name='contact_us'),
+ path('subscribe/', views.subscribe_newsletter, name='subscribe'),
   path('tables/', views.tables, name='tables'),
   path('calendar/', views.sample_page, name='sample_page'),
   path('tab/', views.tab_page, name='tab'),

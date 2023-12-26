@@ -215,3 +215,26 @@ def profile(request):
     "student":student,
   }
   return render(request, 'pages/profile.html', context)
+
+from django.views.decorators.csrf import csrf_exempt
+
+
+def contact_us(request):
+  if (request.method=="POST"):
+        name=request.POST["name"]
+        email=request.POST["email"]
+        phone=request.POST["phone"]
+        subject =request.POST["subject"]
+        message=request.POST["message"]
+        contact=ContactUs(name=name,email=email, phone=phone,subject=subject,message=message)
+        contact.save()
+        return HttpResponse("success")
+       
+        
+@csrf_exempt       
+def subscribe_newsletter(request):
+  if(request.method=="POST"):
+    email=request.POST["email"]
+    data=NewsletterSubscription(email=email)
+    data.save()
+    return HttpResponse("success")

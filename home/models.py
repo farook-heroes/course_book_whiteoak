@@ -51,3 +51,22 @@ class Teacher(models.Model):
 
     def __str__(self):
         return self.username
+    
+    
+ 
+class ContactUs(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    phone = models.CharField(max_length=15, blank=True, null=True)  # Assuming phone number can be optional
+    subject = models.CharField(max_length=200)
+    message = models.TextField()
+
+    def __str__(self):
+        return f"{self.name} - {self.subject}"
+    
+
+class NewsletterSubscription(models.Model):
+    email = models.EmailField(unique=True)
+
+    def __str__(self):
+        return self.email   

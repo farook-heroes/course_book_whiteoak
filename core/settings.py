@@ -36,7 +36,7 @@ DEBUG = 'RENDER' not in os.environ
 ALLOWED_HOSTS = ['*']
 
 # Add here your deployment HOSTS
-CSRF_TRUSTED_ORIGINS = ['https://dashboard.endeavouredtech.com','http://localhost:8000', 'http://localhost:5085', 'http://127.0.0.1:8000', 'http://127.0.0.1:5085']
+CSRF_TRUSTED_ORIGINS = ['https://dashboard.endeavouredtech.com','http://localhost:8000', 'http://localhost:5500/endevour_edtech/contact.html','http://127.0.0.1:8000', 'http://127.0.0.1:5085']
 
 X_FRAME_OPTIONS = "SAMEORIGIN"
 
@@ -54,7 +54,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    
+     'corsheaders',
     "home",
 
     # Tooling Dynamic_DT
@@ -77,7 +77,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     'corsheaders.middleware.CorsMiddleware',
 ]
-CORS_ALLOWED_ORIGINS = ['*']
+CORS_ALLOWED_ORIGINS = ['http://127.0.0.1:5500','http://localhost:5500']
 ROOT_URLCONF = "core.urls"
 
 BASE_TEMPLATES      = os.path.join(BASE_DIR, 'home/templates') 
