@@ -33,14 +33,15 @@
 
         {% if not request.user.is_authenticated %}
         <li
-          data-username="Authentication Sign up Sign in reset password Change password Personal information profile settings map form subscribe"
-          class="nav-item pcoded-hasmenu">
-          <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i
-                class="feather icon-lock"></i></span><span class="pcoded-mtext">Authentication</span></a>
-          <ul class="pcoded-submenu">
-            <li class=""><a href="{% url 'login' %}" class="">Sign IN</a></li>
-          </ul>
-        </li>
+        data-username="Authentication Sign up Sign in reset password Change password Personal information profile settings map form subscribe"
+        class="nav-item pcoded-hasmenu">
+        <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i
+              class="feather icon-lock"></i></span><span class="pcoded-mtext">Authentication</span></a>
+        <ul class="pcoded-submenu">
+          <li class=""><a href="{% url 'login' %}" class="">Sign IN</a></li>
+          <li class=""><a href="{% url 'register' %}" class="">Sign UP</a></li>
+        </ul>
+      </li>
         {% endif %}
 
         {% admin_get_menu as app_list %}
